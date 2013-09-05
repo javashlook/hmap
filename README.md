@@ -33,10 +33,10 @@ An untyped hierarchical map.  Allows something like:
 
 ## Typed maps
 
-``org.javashlook.util.hmap.HMap2<K1, K2, V>``
-``org.javashlook.util.hmap.HMap3<K1, K2, K3, V>``
-``org.javashlook.util.hmap.HMap4<K1, K2, K3, K4, V>``
-``org.javashlook.util.hmap.HMap5<K1, K2, K3, K4, K5, V>``
+* ``org.javashlook.util.hmap.HMap2<K1, K2, V>``
+* ``org.javashlook.util.hmap.HMap3<K1, K2, K3, V>``
+* ``org.javashlook.util.hmap.HMap4<K1, K2, K3, K4, V>``
+* ``org.javashlook.util.hmap.HMap5<K1, K2, K3, K4, K5, V>``
 
 Additional typechecking is done at compile time. Wider maps inherit the narrower ones e.g.
 ``HMap5<K1, K2, K3, K4, K5, V> extends HMap4<K1, K2, K3, K4, K5>``
@@ -44,7 +44,7 @@ Additional typechecking is done at compile time. Wider maps inherit the narrower
 Allows something like:
 
 ```java
-	private HMap3<Integer, String, String, Integer> hmap;
+    HMap3<Integer, String, String, Integer> hmap;
 
     hmap = HashHMaps.create3();
 
