@@ -9,7 +9,9 @@ import java.util.Set;
  */
 final class HashHMap extends HashedHMap implements HMap {
 
-    HashHMap() {}
+	private static final long serialVersionUID = 5666730336257646372L;
+
+	HashHMap() {}
 
     @Override
     public Set<Object> keys() {

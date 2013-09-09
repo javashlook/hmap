@@ -1,5 +1,6 @@
 package org.javashlook.util.hmap;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -13,9 +14,11 @@ import java.util.Set;
  * Internal implementation of hash-based {@link HMap}, with linked maps.
  * 
  */
-class HashedHMap {
+class HashedHMap implements Serializable {
 
-    private static final HashedHMap EMPTY = new HashedHMap();
+	private static final long serialVersionUID = -979104885286205414L;
+
+	private static final HashedHMap EMPTY = new HashedHMap();
 
     final Map<Object, HashedHMap> map = new LinkedHashMap<Object, HashedHMap>();
     final Set<Object> values = new LinkedHashSet<Object>();

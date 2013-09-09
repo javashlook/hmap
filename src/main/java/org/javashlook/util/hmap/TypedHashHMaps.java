@@ -11,7 +11,9 @@ final class TypedHashHMaps {
 
     static class HashHMap2<K1, K2, V> extends HashedHMap implements HMap2<K1, K2, V> {
 
-        @SuppressWarnings("unchecked")
+		private static final long serialVersionUID = -6578073289632916687L;
+
+		@SuppressWarnings("unchecked")
         @Override
         public Set<K1> keys() {
             return (Set<K1>)map.keySet();
@@ -77,7 +79,9 @@ final class TypedHashHMaps {
 
     static class HashHMap3<K1, K2, K3, V> extends HashHMap2<K1, K2, K3> implements HMap3<K1, K2, K3, V> {
 
-        @Override
+		private static final long serialVersionUID = -8455784157630202372L;
+
+		@Override
         public void put(K1 key1, K2 key2, K3 key3, V value) {
             putImpl(value, key1, key2, key3);
         }
@@ -101,7 +105,9 @@ final class TypedHashHMaps {
 
     static class HashHMap4<K1, K2, K3, K4, V> extends HashHMap3<K1, K2, K3, K4> implements HMap4<K1, K2, K3, K4, V> {
 
-        @Override
+		private static final long serialVersionUID = -5697299250028252142L;
+
+		@Override
         public void put(K1 key1, K2 key2, K3 key3, K4 key4, V value) {
             putImpl(value, key1, key2, key3, key4);
         }
@@ -126,7 +132,9 @@ final class TypedHashHMaps {
     static class HashHMap5<K1, K2, K3, K4, K5, V> extends HashHMap4<K1, K2, K3, K4, K5> implements
         HMap5<K1, K2, K3, K4, K5, V> {
 
-        @Override
+		private static final long serialVersionUID = 6402841344834583325L;
+
+		@Override
         public void put(K1 key1, K2 key2, K3 key3, K4 key4, K5 key5, V value) {
             putImpl(value, key1, key2, key3, key4, key5);
         }
